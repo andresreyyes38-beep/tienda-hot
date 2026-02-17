@@ -1,0 +1,171 @@
+/* Variables de color basadas en tu logo */
+:root {
+    --bg-dark: #121212;
+    --card-bg: #1e1e1e;
+    --navy: #2d3e66;
+    --gold: #d4af37;
+    --white: #ffffff;
+    --gray-text: #a0aec0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header Estilo Pro */
+header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('logo.jpg'); /* Asegúrate de que tu imagen se llame logo.jpg */
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid var(--gold);
+}
+
+.header-content {
+    text-align: center;
+}
+
+header h1 {
+    font-weight: 900;
+    font-size: 4rem;
+    margin: 0;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+}
+
+header p {
+    color: var(--gray-text);
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Menú de navegación */
+nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* Rejilla de productos */
+.container {
+    max-width: 1200px;
+    margin: -50px auto 50px;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjetas */
+.product-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 25px;
+    position: relative;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.tag-crypto {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(45, 62, 102, 0.8);
+    color: #fff;
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.folder-icon {
+    background: var(--navy);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.product-info h3 {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.product-info p {
+    color: var(--gold);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 5px 0 20px;
+}
+
+/* Fila de precio y botón */
+.price-row {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-row span {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.btn-buy {
+    background: var(--white);
+    color: var(--bg-dark);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+}
+
+.btn-buy:hover {
+    background: var(--gold);
+    color: var(--white);
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+    color: var(--gray-text);
+    font-size: 0.8rem;
+}
